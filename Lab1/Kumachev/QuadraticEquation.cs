@@ -24,7 +24,7 @@ namespace Lab1.Kumachev
 
             if (d < 0)
             {
-                throw new Exception("D < 0");
+                throw new KumachevException("D < 0");
             }
 
             if (d == 0)

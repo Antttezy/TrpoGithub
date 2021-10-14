@@ -43,6 +43,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Kumachev\KumachevException.cs" />
     <Compile Include="Kumachev\KumachevLog.cs" />
     <Compile Include="Kumachev\LinearEquation.cs" />
     <Compile Include="Kumachev\QuadraticEquation.cs" />

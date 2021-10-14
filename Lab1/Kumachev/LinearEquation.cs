@@ -1,5 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 
 namespace Lab1.Kumachev
 {
@@ -13,7 +12,7 @@ namespace Lab1.Kumachev
 
             if (a == 0)
             {
-                throw new Exception("A = 0");
+                throw new KumachevException("A = 0");
             }
 
             X.Add(-b / a);
