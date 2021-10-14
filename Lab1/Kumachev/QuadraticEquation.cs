@@ -1,9 +1,10 @@
-﻿using System;
+﻿using Lab1.Core;
+using System;
 using System.Collections.Generic;
 
-namespace Lab1
+namespace Lab1.Kumachev
 {
-    public class B : A
+    public class QuadraticEquation : LinearEquation, EquationInterface
     {
         protected float D(float a, float b, float c)
         {

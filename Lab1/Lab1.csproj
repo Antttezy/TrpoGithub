@@ -43,14 +43,18 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="A.cs" />
-    <Compile Include="B.cs" />
-    <Compile Include="C.cs" />
+    <Compile Include="Kumachev\KumachevLog.cs" />
+    <Compile Include="Kumachev\LinearEquation.cs" />
+    <Compile Include="Kumachev\QuadraticEquation.cs" />
+    <Compile Include="Core\EquationInterface.cs" />
+    <Compile Include="Core\LogAbstract.cs" />
+    <Compile Include="Core\LogInterface.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

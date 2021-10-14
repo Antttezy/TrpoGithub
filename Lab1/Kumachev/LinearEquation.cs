@@ -1,9 +1,9 @@
 ﻿using System;
 using System.Collections.Generic;
 
-namespace Lab1
+namespace Lab1.Kumachev
 {
-    public class A
+    public class LinearEquation
     {
         public List<float> X { get; } = new List<float>();
 
