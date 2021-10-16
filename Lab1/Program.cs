@@ -1,15 +1,25 @@
-﻿using Lab1.Core;
+﻿using Lab.Core;
 using Lab1.Kumachev;
 using System;
 using System.Collections.Generic;
+using System.IO;
 
 namespace Lab1
 {
     class Program
     {
+        static string GetVersion()
+        {
+            using (StreamReader reader = File.OpenText("version"))
+            {
+                return reader.ReadLine();
+            }
+        }
+
         static void Main(string[] args)
         {
             LogInterface logger = KumachevLog.I();
+            logger.Log($"Версия программы {GetVersion()}");
             logger.Log("Program: Ввод 3 параметров");
 
             if (!float.TryParse(Console.ReadLine(), out float a) || !float.TryParse(Console.ReadLine(), out float b) || !float.TryParse(Console.ReadLine(), out float c))

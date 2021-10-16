@@ -1,4 +1,4 @@
-﻿using Lab1.Core;
+﻿using Lab.Core;
 using System;
 using System.Collections.Generic;
 

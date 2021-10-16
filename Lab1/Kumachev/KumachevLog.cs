@@ -1,5 +1,7 @@
-﻿using Lab1.Core;
+﻿using Lab.Core;
+using System;
 using System.Collections.Generic;
+using System.IO;
 
 namespace Lab1.Kumachev
 {
@@ -32,7 +34,20 @@ namespace Lab1.Kumachev
 
         public LogInterface Write()
         {
-            WriteConsole(logs.ToArray());
+            string[] logArray = logs.ToArray();
+            WriteConsole(logArray);
+
+            if (!Directory.Exists("Logs"))
+            {
+                Directory.CreateDirectory("Logs");
+            }
+
+            using (StreamWriter writer = File.CreateText($"Logs\\{DateTime.Now : dd.MM.yyyy_HH.mm.ss.fff}.log"))
+            {
+                writer.Write(FormatLog(logArray));
+            }
+
+            logs.Clear();
             return this;
         }
     }
