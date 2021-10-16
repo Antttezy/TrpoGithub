@@ -12,19 +12,7 @@ namespace Lab1
             LogInterface logger = KumachevLog.I();
             logger.Log("Program: Ввод 3 параметров");
 
-            if (!float.TryParse(Console.ReadLine(), out float a))
-            {
-                logger.Log("Введено не число");
-                return;
-            }
-
-            if (!float.TryParse(Console.ReadLine(), out float b))
-            {
-                logger.Log("Введено не число");
-                return;
-            }
-
-            if (!float.TryParse(Console.ReadLine(), out float c))
+            if (!float.TryParse(Console.ReadLine(), out float a) || !float.TryParse(Console.ReadLine(), out float b) || !float.TryParse(Console.ReadLine(), out float c))
             {
                 logger.Log("Введено не число");
                 return;
